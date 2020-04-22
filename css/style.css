@@ -163,10 +163,7 @@ nav{
 .container{
    width: 1400px;
    margin: 0 auto;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-}
+} 
 .section_title{
    font-family: 'PF Isotext Pro';
    font-size: 30px;
@@ -176,6 +173,11 @@ nav{
 }
 .download__content{
    margin-top: 40px;
+}
+.main-download{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 .section_desc{
    font-family: 'PF Isotext Pro';
@@ -301,7 +303,8 @@ footer{
    font-family: Arial, Helvetica, sans-serif;
    font-size: 16px;
    color: #aaaaaa;
-   margin-top: 20px;
+   text-align: center;
+   padding-top: 20px;
 }
 .footer-wrap{
    display: flex;
@@ -546,5 +549,116 @@ footer{
    margin-top: 20px;
 }
 
-/* --------------------Kontakti dlya postavschika------------------ */
+/* --------------------------Product------------------------------ */
 
+.dws-wrapper{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.boxImg{
+ position: relative;
+ font-family: Cuprum, Arial, Helvetica, sans-serif;
+ width: 350px;
+ height: 260px;
+ overflow: hidden;
+ padding: 20px;
+}
+.boxImg img{
+ height: 260px;
+ transition: .5s;
+}
+.overlay-content{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+.overlay-content:before, .overlay-content:after{
+ content: '';
+ width: 350px;
+ height: 260px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background: rgba(42,40,41,0.8);
+ opacity: .1;
+ transition: 1s;
+}
+.overlay-content:before{
+ transform: translateX(-125%) rotate(45deg);
+}
+.overlay-content:after{
+ transform: translateX(195%) rotate(45deg);
+}
+.text{
+ position: relative;
+ font-family: 'PF Isotext Pro';
+ margin-top: 85px;
+ color: #e2ba68;
+ text-align: center;
+ z-index: 999;
+}
+ .text h3{
+ font-size: 20px;
+ transform: scale(0);
+ transition: .5s;
+} 
+.button-click{
+ position: absolute;
+ top: 40%;
+ left: 30%;
+ border: 2px solid #ffffff;
+ padding:10px 30px;
+ border-radius: 8px;
+ opacity: 0;
+ transition: .2s ease-in-out;
+ overflow: hidden;
+ margin-top: 15px;
+ z-index: 1;
+}
+.bt{
+ color: #e2ba68;
+ text-decoration: none;
+ text-transform: uppercase;
+}
+.button-click:before{
+ content: '';
+ position: absolute;
+ top: -8px;
+ left: -75px;
+ height: 50px;
+ width: 50px;
+ background: linear-gradient(90deg,rgba(255,255,255,.1), rgba(255,255,255,.5));
+ transform: skewX(-45deg);
+}
+
+.button-click:hover::before{
+ left: 190px;
+ transition: .5s ease-in-out;
+}
+.button-click:active{
+ border: 2px solid #b3b3b3;
+}
+.boxImg:hover img{
+ transform: rotate(-15deg) scale(2);
+ filter: blur(2px);
+}
+.boxImg:hover .button-click{
+ opacity: 1;
+ transition: .5s;
+}
+.boxImg:hover .overlay-content::before{
+ transform: translateX(5%) rotate(45deg) scale(2);
+ transition: .5s;
+ opacity: .6;
+}
+.boxImg:hover .overlay-content::after{
+ transform: translateX(-15%) rotate(20deg) scale(2);
+ transition: .5s;
+ opacity: .6;
+}
+.boxImg:hover .text h3{
+ transform: scale(1);
+}

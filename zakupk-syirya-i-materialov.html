@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Вход</title>
-   <link rel="stylesheet" href="css/signup.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Продукция</title>
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 </head>
 <body>
-   <header class="header">
-      <div class="main_logo">
-         <a href="index.html"><img class="logo" src="img/bmz.png" alt="Logo"></a>
-      </div>
-   </header>
+   
+<!-- Header -->
+<header class="header">
+   <div class="main_logo">
+      <a href="index.html"><img class="logo" src="img/bmz.png" alt="Logo"></a>
+   </div>
+      <!-- Navigation -->
    <nav class="bmz_menu">
       <ul>
          <li><a href="index.html">ГЛАВНАЯ</a></li>
@@ -49,39 +51,35 @@
          </li>
        </ul>
 </nav>
-
-   <div class="container mlogin">
-		<div id="login">
-		<h1><i class="fas fa-sign-in-alt"></i>Вход</h1>
-		<form action="" id="loginform" method="post"name="loginform">
-      <label for="user_login">Имя пользователя<br><input class="input" id="username" name="username"size="20"
-      type="text" value=""></label>
-      <label for="user_pass">Пароль<br>
-      <input class="input" id="password" name="password"size="20"
-      type="password" value=""></label>
-      <input class="button" name="login"type= "submit" value="Войти"></input>
-      <p class="regtext">Еще не зарегистрированы?<br><a href= "register.html">Регистрация</a>!</p>
-      </form>
+</header>
+<section class="dark-theme">
+   <div class="page-title">
+      <img class="main-img" src="img/raw.jpg" alt="">
+      <div class="main-title">
+         <h1 class="page-location">Закупки сырья и материалов</h1>
+      </div>
+   </div>
+</section>
+<section class="bottom-theme">
+   <div class="container">
+      <div class="row">
+         <div class="col">
+            <ol class="breadcrumb">
+               <li><a href="index.html">Главная</a></li>
+               <li><a href="zakupk-syirya-i-materialov.html">Поставщику</a></li>
+               <li class="active">Закупки сырья и материалов</li>
+            </ol>
+         </div>
       </div>
    </div>
 
-   <!-- Footer -->
-   <footer>
-      <div class="container__footer">
-         <div class="footer__items">
-            <div class="footer-info">
-               © 2017 <span class="color__text">ОРиИТ УМ</span> ОАО «БМЗ — управляющая компания холдинга «БМК»
-            </div>
-            <div class="footer-wrap">
-               <div class="president">
-                  <a href="http://president.gov.by/by/" target="_blank"><img src="img/president.png" alt="Сайт президента РБ" width="169" height="62"></a>
-               </div>
-               <div class="minprom">
-                  <a href="http://minprom.gov.by/" target="_blank"><img src="img/minprom.png" alt="" width="169" height="62"></a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </footer>
 </body>
 </html>
+
+<!-- STYLES -->
+<style>
+   .container{
+      width: 1180px;
+   }
+   </style>
+<!--------------------------------------------------->
